@@ -9,7 +9,7 @@ public class playerJump : MonoBehaviour
 
     //variables that are set
     Rigidbody player; //allows what rigidbody the player will be
-    private float jumpForce = 10f; //how much force you want when jumping
+    public float jumpForce = 10f; //how much force you want when jumping
     private bool onGround; //allows the functions to determine whether player is on the ground or not
 
 

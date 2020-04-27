@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  jumpForce: 10
 --- !u!54 &124520857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -433,7 +434,6 @@ GameObject:
   - component: {fileID: 735650889}
   - component: {fileID: 735650888}
   - component: {fileID: 735650887}
-  - component: {fileID: 735650893}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -470,6 +470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  jumpForce: 6
 --- !u!65 &735650889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -543,18 +544,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &735650893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735650886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ba1241f87f28c4fbcd53d7f0dfc976, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1557229532
 GameObject:
   m_ObjectHideFlags: 0
