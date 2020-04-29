@@ -10,6 +10,11 @@ public class CharacterController : MonoBehaviour
     Rigidbody player; //allows what rigidbody the player will be
     public float jumpForce = 10f; //how much force you want when jumping
     private bool onGround; //allows the functions to determine whether player is on the ground or not
+    private bool crouching;
+    private bool notcrouching;
+    private Vector3 scaleChange;
+    private Vector3 posChange;
+
 
     // Use this for initialization
     void Start()
@@ -52,6 +57,35 @@ public class CharacterController : MonoBehaviour
             //says the player is no longer on the ground
             onGround = false;
         }
+
+        scaleChange = new Vector3(-0f, -0.5f, -0f);
+
+        posChange = new Vector3(0f, -0.25f, 0f);
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouching = true;
+        }
+
+        if (Input.GetButtonUp("Crouch"))
+        {
+            notcrouching = true;
+        }
+
+        if (crouching)
+        {
+            this.transform.localScale += scaleChange;
+            this.transform.localPosition += posChange;
+            crouching = false;
+        }
+        if (notcrouching)
+        {
+            this.transform.localScale -= scaleChange;
+            this.transform.localPosition -= posChange;
+            notcrouching = false;
+        }
+
+
     }
 
     void OnCollisionEnter(Collision other)

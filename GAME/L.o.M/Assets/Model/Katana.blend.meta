@@ -11,6 +11,8 @@ ModelImporter:
     100010: KNY_Schwert
     100012: Light
     100014: Schwert
+    100016: Cam
+    100018: Cylinder.001
     400000: Camera
     400002: Cylinder
     400004: Griff
@@ -19,19 +21,27 @@ ModelImporter:
     400010: KNY_Schwert
     400012: Light
     400014: Schwert
+    400016: Cam
+    400018: Cylinder.001
     2000000: Camera
+    2000002: Cam
     2100000: BLACK
     2100002: WHITE
     2100004: Gold
+    2100006: Licht
+    2100008: Material
     2300000: Cylinder
     2300002: Griff
     2300004: Schwert
+    2300006: Cylinder.001
     3300000: Cylinder
     3300002: Griff
     3300004: Schwert
+    3300006: Cylinder.001
     4300000: Schwert
     4300002: Cylinder
     4300004: Griff
+    4300006: Cylinder.001
     10800000: Light
     2186277476908879412: ImportLogs
   externalObjects: {}
