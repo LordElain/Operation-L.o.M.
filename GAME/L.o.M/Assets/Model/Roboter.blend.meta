@@ -7,15 +7,25 @@ ModelImporter:
     100002: Cylinder
     100004: Light
     100006: //RootNode
+    100008: Body
+    100010: Cube
     400000: Camera
     400002: Cylinder
     400004: Light
     400006: //RootNode
+    400008: Body
+    400010: Cube
     2000000: Camera
     2100000: No Name
     2300000: Cylinder
+    2300002: Body
+    2300004: Cube
     3300000: Cylinder
+    3300002: Body
+    3300004: Cube
     4300000: Cylinder
+    4300002: Body
+    4300004: Cube
     10800000: Light
   externalObjects: {}
   materials:
