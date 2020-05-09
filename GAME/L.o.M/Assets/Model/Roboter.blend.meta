@@ -9,23 +9,45 @@ ModelImporter:
     100006: //RootNode
     100008: Body
     100010: Cube
+    100012: Arm_L
+    100014: Arm_R
+    100016: Hand_L
+    100018: Hand_R
     400000: Camera
     400002: Cylinder
     400004: Light
     400006: //RootNode
     400008: Body
     400010: Cube
+    400012: Arm_L
+    400014: Arm_R
+    400016: Hand_L
+    400018: Hand_R
     2000000: Camera
     2100000: No Name
+    2100002: Material
+    2100004: GLASS
     2300000: Cylinder
     2300002: Body
     2300004: Cube
+    2300006: Arm_L
+    2300008: Arm_R
+    2300010: Hand_L
+    2300012: Hand_R
     3300000: Cylinder
     3300002: Body
     3300004: Cube
+    3300006: Arm_L
+    3300008: Arm_R
+    3300010: Hand_L
+    3300012: Hand_R
     4300000: Cylinder
     4300002: Body
     4300004: Cube
+    4300006: Arm_R
+    4300008: Hand_R
+    4300010: Arm_L
+    4300012: Hand_L
     10800000: Light
   externalObjects: {}
   materials:
