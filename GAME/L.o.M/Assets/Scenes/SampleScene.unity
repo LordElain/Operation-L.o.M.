@@ -238,6 +238,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpForce: 10
+  turnSpeed: 4
+  minTurnAngle: -90
+  maxTurnAngle: 90
 --- !u!54 &124520857
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -777,8 +780,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2e3a78893b7f34f9ce0e954d750a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 4
   jumpForce: 6
+  turnSpeed: 4
+  minTurnAngle: -90
+  maxTurnAngle: 90
 --- !u!65 &735650889
 BoxCollider:
   m_ObjectHideFlags: 0

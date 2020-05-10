@@ -14,7 +14,10 @@ public class CharacterController : MonoBehaviour
     private bool notcrouching;
     private Vector3 scaleChange;
     private Vector3 posChange;
-
+    private float rotX;
+    public float turnSpeed = 4.0f;
+    public float minTurnAngle = -90.0f;
+    public float maxTurnAngle = 90.0f;
 
     // Use this for initialization
     void Start()
@@ -85,7 +88,21 @@ public class CharacterController : MonoBehaviour
             notcrouching = false;
         }
 
+        MouseAiming();
 
+    }
+
+    void MouseAiming()
+    {
+        // get the mouse inputs
+        float y = Input.GetAxis("Mouse X") * turnSpeed;
+        //rotX += Input.GetAxis("Mouse Y") * turnSpeed;
+
+        // clamp the vertical rotation
+        //rotX = Mathf.Clamp(rotX, minTurnAngle, maxTurnAngle);
+
+        // rotate the camera
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + y, 0);
     }
 
     void OnCollisionEnter(Collision other)
