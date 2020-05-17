@@ -5,6 +5,7 @@ using UnityEngine;
 public class Attack : MonoBehaviour
 {
     private Animator animatorComp = null;
+    public bool hashit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,7 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            hashit = true;
             animatorComp.SetTrigger("Hit");
         }
     }
