@@ -2299,6 +2299,7 @@ GameObject:
   - component: {fileID: 1531854912}
   - component: {fileID: 1531854913}
   - component: {fileID: 1531854914}
+  - component: {fileID: 1531854915}
   m_Layer: 0
   m_Name: Robot Kyle_Katana
   m_TagString: Untagged
@@ -2439,6 +2440,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hashit: 0
+--- !u!114 &1531854915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531854907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92f80bb4108fde744ae3ec957da095ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spieler: {fileID: 1531854907}
 --- !u!1 &1531855233
 GameObject:
   m_ObjectHideFlags: 0
