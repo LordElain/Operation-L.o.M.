@@ -18,8 +18,6 @@ public class Run_Animation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            CharacterControl Play = Spieler.GetComponent<CharacterControl>();
-
             animatorComp.SetTrigger("Run");
         }
         else
