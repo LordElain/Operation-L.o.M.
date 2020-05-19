@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+
 using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
+  
     public float speed = 4.0f;
+    public bool moving = false;
     private float speedx;
     private float speedz;
     private float translation;
@@ -24,8 +27,8 @@ public class CharacterControl : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
-        // turn off the cursor
+    {      
+         // turn off the cursor
         Cursor.lockState = CursorLockMode.Locked;
         //grabs the Rigidbody from the player
         player = GetComponent<Rigidbody>();
@@ -38,10 +41,12 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+              
         // Input.GetAxis() is used to get the user's input
         // You can furthor set it on Unity. (Edit, Project Settings, Input)
         if (onGround == true)
         {
+            moving = true;
             if (!wasinair)
                 speedx = speed;
             wasinair = true;
@@ -145,5 +150,10 @@ public class CharacterControl : MonoBehaviour
     {
         speed *= 0.5f;
         speedx = speedz = speed;
+    }
+
+    public void GetMovement ()
+    {
+
     }
 }

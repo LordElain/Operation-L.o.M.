@@ -1058,6 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  overallspeed: 0
   jumpForce: 6
   turnSpeed: 4
   minTurnAngle: -90
@@ -1496,6 +1497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  overallspeed: 0
   jumpForce: 6
   turnSpeed: 4
   minTurnAngle: -90

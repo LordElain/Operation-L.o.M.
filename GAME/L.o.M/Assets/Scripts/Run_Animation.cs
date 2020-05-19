@@ -10,6 +10,7 @@ public class Run_Animation : MonoBehaviour
     void Start()
     {
         animatorComp = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -17,12 +18,21 @@ public class Run_Animation : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            CharacterControl Play = Spieler.GetComponent<CharacterControl>();
-            if(Play.speed > 0)
-            {
-                animatorComp.SetTrigger("Run");
-            }
             
+            CharacterControl Play = Spieler.GetComponent<CharacterControl>();
+
+            
+            animatorComp.SetTrigger("Run");
+          
+                
+            
+
+
+
+        }
+        else
+        {
+            animatorComp.SetTrigger("Idle");
         }
     }
 }
