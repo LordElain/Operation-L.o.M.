@@ -20,7 +20,7 @@ public class EnemyControl : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        Attack WeaponScript = Weapon.GetComponent<Attack>();
+        Animation_Attack WeaponScript = Weapon.GetComponent<Animation_Attack>();
         if (other.gameObject.CompareTag("weapon"))
         {
             if (enemyhealth > 0)
