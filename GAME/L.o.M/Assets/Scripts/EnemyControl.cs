@@ -21,7 +21,7 @@ public class EnemyControl : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         Animation_Attack WeaponScript = Weapon.GetComponent<Animation_Attack>();
-        if (other.gameObject.CompareTag("weapon"))
+        if (other.gameObject.CompareTag("weapon"))                                      //Wird nur ausgeführt wenn Gameobject den tag 'Weapon' hat
         {
             if (enemyhealth > 0)
             {
