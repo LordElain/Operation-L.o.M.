@@ -152,8 +152,4 @@ public class CharacterControl : MonoBehaviour
         speedx = speedz = speed;
     }
 
-    public void GetMovement ()
-    {
-
-    }
 }
