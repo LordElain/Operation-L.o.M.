@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   moving: 0
-  jumpForce: 6
+  jumpForce: 15
   turnSpeed: 4
   minTurnAngle: -90
   maxTurnAngle: 90
