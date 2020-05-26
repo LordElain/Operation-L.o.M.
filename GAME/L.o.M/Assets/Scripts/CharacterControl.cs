@@ -20,11 +20,14 @@ public class CharacterControl : MonoBehaviour
     private bool sprinting;
     private bool wasinair;
     private bool alive;
+    private bool speedchange = true;
     private Vector3 posChange;
     public float turnSpeed = 4.0f;
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
     public int playerHealth = 5;
+    private float newstraffe;
+    private float newtranslation;
     CapsuleCollider Controller;
 
     // Use this for initialization
@@ -54,10 +57,6 @@ public class CharacterControl : MonoBehaviour
                 if (!wasinair)
                     speedx = speed;
                 wasinair = true;
-                if (sprinting && crouching)                                             //Sliden soll nur gehen wenn man während des Sprinten croucht
-                {
-                    Sliding();
-                }
                 if (Input.GetButtonDown("Sprint"))                                      //Sprinten verdoppelt Spielerspeed, sprinting auf true für crouchen
                 {
                     speedx *= 2.0f;
@@ -81,7 +80,29 @@ public class CharacterControl : MonoBehaviour
 
             translation = Input.GetAxis("Vertical") * speedz * Time.deltaTime;          //Bewegungsberechnung z-Achse
 
-            transform.Translate(straffe, 0, translation);                               //Kombination von beiden Berechnungen um Bewegunng zu erzeugen
+            if (sprinting && crouching)                                             //Sliden soll nur gehen wenn man während des Sprinten croucht
+            {
+                if (speedchange)
+                {
+                    newstraffe = straffe;
+                    newtranslation = translation;
+                }
+                speedchange = false;
+                if (newtranslation > 0.001f || newtranslation > 0.001f)
+                {
+                    newstraffe *= 0.2f * Time.deltaTime;
+                    newtranslation *= 0.2f * Time.deltaTime;
+                    //Debug.Log("If ausgeführt");
+                }
+                transform.Translate(newstraffe, 0, newtranslation);
+                //Debug.Log(newstraffe + " und " + newtranslation);
+            }
+            else
+            {
+                transform.Translate(straffe, 0, translation);                   //Kombination von beiden Berechnungen um Bewegunng zu erzeugen
+                speedchange = true;
+            }
+
 
             if (Input.GetKeyDown("escape"))
             {
@@ -139,20 +160,6 @@ public class CharacterControl : MonoBehaviour
         {
             //if the collider is tagged "ground", sets onGround boolean to true
             onGround = true;
-        }
-    }
-
-    void Sliding()
-    {
-        for (float i = speedx; i < 1; i--)                                          //funktioniert nicht, nur erste Idee für sliding
-        {
-            straffe = Input.GetAxis("Horizontal") * speedx * Time.deltaTime;
-
-            translation = Input.GetAxis("Vertical") * speedz * Time.deltaTime;
-
-            transform.Translate(straffe, 0, translation);
-            speedx--;
-            speedz--;
         }
     }
 
