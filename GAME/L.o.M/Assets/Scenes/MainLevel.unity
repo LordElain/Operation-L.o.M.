@@ -887,6 +887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd73cd0a85d3d547a4101dd87701b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1531854907}
   turnSpeed: 4
   moveSpeed: 2
   minTurnAngle: -90
@@ -1124,6 +1125,7 @@ MonoBehaviour:
   turnSpeed: 4
   minTurnAngle: -90
   maxTurnAngle: 90
+  playerHealth: 5
 --- !u!65 &735650889
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1579,6 +1581,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyhealth: 2
   Weapon: {fileID: 1531854907}
+  player: {fileID: 1531854907}
+  target: {fileID: 1531567579}
 --- !u!114 &1428424672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1694,6 +1698,7 @@ MonoBehaviour:
   turnSpeed: 4
   minTurnAngle: -90
   maxTurnAngle: 90
+  playerHealth: 5
 --- !u!4 &1531567489
 Transform:
   m_ObjectHideFlags: 0
@@ -2486,17 +2491,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1531567579}
-  - component: {fileID: 1492478166}
   - component: {fileID: 1531854908}
   - component: {fileID: 1531854909}
   - component: {fileID: 1531854910}
-  - component: {fileID: 1531854912}
   - component: {fileID: 1531854913}
+  - component: {fileID: 1492478166}
   - component: {fileID: 1531854914}
   - component: {fileID: 1531854915}
   m_Layer: 9
   m_Name: Robot Kyle_Katana
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2584,24 +2588,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!143 &1531854912
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531854907}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!95 &1531854913
 Animator:
   serializedVersion: 3
@@ -2634,6 +2620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hashit: 0
+  canhit: 0
 --- !u!114 &1531854915
 MonoBehaviour:
   m_ObjectHideFlags: 0

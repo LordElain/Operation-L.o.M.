@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CameraMoevement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject player;
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -20,6 +20,8 @@ public class CameraMoevement : MonoBehaviour
 
     void Update()
     {
+        CharacterControl PlayerScript = player.GetComponent<CharacterControl>();
+        if (PlayerScript.playerHealth != 0)
         MouseAiming();
     }
 

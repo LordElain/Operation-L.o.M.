@@ -6,6 +6,7 @@ public class Animation_Attack : MonoBehaviour
 {
     private Animator animatorComp = null;
     public bool hashit = false;
+    public bool canhit = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,7 @@ public class Animation_Attack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            canhit = true;
             hashit = true;
             animatorComp.SetTrigger("Hit");
         }

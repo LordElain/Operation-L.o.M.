@@ -37,7 +37,6 @@ public class FieldOfView : MonoBehaviour
             float dstToTarget = Vector3.Distance(transform.position, target.position);                  //Entfernung zum Ziel berechnen
             if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2 && dstToTarget < 3)     //Wenn im Sichtradius und Entfernung kleiner 3
             {
-                Debug.Log(dstToTarget); 
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))       //Raycast gibt true wenn kein Obstacle im sichtfeld ist (Raycast von mom. Pos in Richtung und Distanz des Ziels checkt nach ObstacleMask)
                 {
                     FollowScript.detectPlayer = true;
