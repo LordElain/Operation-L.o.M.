@@ -398,7 +398,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
 --- !u!114 &1080856607
 MonoBehaviour:
@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1509a3c40791cb4da69216dc74746b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoClip: {fileID: 0}
 --- !u!1 &1516820532
 GameObject:
   m_ObjectHideFlags: 0
