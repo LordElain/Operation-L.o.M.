@@ -90,8 +90,8 @@ public class CharacterControl : MonoBehaviour
                 speedchange = false;
                 if (newtranslation > 0.001f || newtranslation > 0.001f)
                 {
-                    newstraffe *= 0.2f * Time.deltaTime;
-                    newtranslation *= 0.2f * Time.deltaTime;
+                    newstraffe -= (straffe*0.4f) * Time.deltaTime;
+                    newtranslation -= (translation*0.4f) * Time.deltaTime;
                     //Debug.Log("If ausgeführt");
                 }
                 transform.Translate(newstraffe, 0, newtranslation);
