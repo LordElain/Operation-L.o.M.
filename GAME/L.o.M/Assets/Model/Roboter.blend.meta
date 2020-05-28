@@ -13,6 +13,106 @@ ModelImporter:
     100014: Arm_R
     100016: Hand_L
     100018: Hand_R
+    100020: Armature
+    100022: Bone
+    100024: Bone.001
+    100026: Bone.002
+    100028: Bone.003
+    100030: Bone.004
+    100032: Bone.005
+    100034: Bone.006
+    100036: Bone.007
+    100038: Bone.008
+    100040: Bone.008_end
+    100042: Bone.009
+    100044: Bone.010
+    100046: Bone.011
+    100048: Bone.012
+    100050: Bone.012_end
+    100052: Bone.013
+    100054: Bone.013_end
+    100056: Bone.014
+    100058: Bone.015
+    100060: Bone.016
+    100062: Bone.017
+    100064: Bone.018
+    100066: Bone.019
+    100068: Bone.020
+    100070: Bone.020_end
+    100072: Bone.021
+    100074: Bone.022
+    100076: Bone.023
+    100078: Bone.024
+    100080: Bone.024_end
+    100082: Bone.025
+    100084: Bone.025_end
+    100086: Jet
+    100088: Jet_end
+    100090: L_Greif_3
+    100092: L_Greif_3_end
+    100094: L_Greif_h1
+    100096: L_Greif_h2
+    100098: L_Greif_h3
+    100100: L_Greif_h3_end
+    100102: L_Greif_v1
+    100104: L_Greif_v2
+    100106: L_Hand_h
+    100108: L_Hand_v
+    100110: L_Oberarm
+    100112: L_Rib
+    100114: L_Schulter
+    100116: L_Unterarm
+    100118: Main
+    100120: ORG-Bone
+    100122: ORG-Bone.001
+    100124: ORG-Bone.002
+    100126: ORG-Bone.003
+    100128: ORG-Bone.004
+    100130: ORG-Bone.005
+    100132: ORG-Bone.006
+    100134: ORG-Bone.007
+    100136: ORG-Bone.008
+    100138: ORG-Bone.008_end
+    100140: ORG-Bone.009
+    100142: ORG-Bone.010
+    100144: ORG-Bone.011
+    100146: ORG-Bone.012
+    100148: ORG-Bone.012_end
+    100150: ORG-Bone.013
+    100152: ORG-Bone.013_end
+    100154: ORG-Bone.014
+    100156: ORG-Bone.015
+    100158: ORG-Bone.016
+    100160: ORG-Bone.017
+    100162: ORG-Bone.018
+    100164: ORG-Bone.019
+    100166: ORG-Bone.020
+    100168: ORG-Bone.020_end
+    100170: ORG-Bone.021
+    100172: ORG-Bone.022
+    100174: ORG-Bone.023
+    100176: ORG-Bone.024
+    100178: ORG-Bone.024_end
+    100180: ORG-Bone.025
+    100182: ORG-Bone.025_end
+    100184: R_Hand_h
+    100186: R_Hand_h1
+    100188: R_Hand_h2
+    100190: R_Hand_h3
+    100192: R_Hand_h3_end
+    100194: R_Hand_v
+    100196: R_Hand_v1
+    100198: R_Hand_v2
+    100200: R_Hand_v3
+    100202: R_Hand_v3_end
+    100204: R_Oberarm
+    100206: R_Rib
+    100208: R_Schulter
+    100210: R_Unterarm
+    100212: rig
+    100214: root
+    100216: WGT-rig_root
+    100218: WGTS_rig
     400000: Camera
     400002: Cylinder
     400004: Light
@@ -23,6 +123,106 @@ ModelImporter:
     400014: Arm_R
     400016: Hand_L
     400018: Hand_R
+    400020: Armature
+    400022: Bone
+    400024: Bone.001
+    400026: Bone.002
+    400028: Bone.003
+    400030: Bone.004
+    400032: Bone.005
+    400034: Bone.006
+    400036: Bone.007
+    400038: Bone.008
+    400040: Bone.008_end
+    400042: Bone.009
+    400044: Bone.010
+    400046: Bone.011
+    400048: Bone.012
+    400050: Bone.012_end
+    400052: Bone.013
+    400054: Bone.013_end
+    400056: Bone.014
+    400058: Bone.015
+    400060: Bone.016
+    400062: Bone.017
+    400064: Bone.018
+    400066: Bone.019
+    400068: Bone.020
+    400070: Bone.020_end
+    400072: Bone.021
+    400074: Bone.022
+    400076: Bone.023
+    400078: Bone.024
+    400080: Bone.024_end
+    400082: Bone.025
+    400084: Bone.025_end
+    400086: Jet
+    400088: Jet_end
+    400090: L_Greif_3
+    400092: L_Greif_3_end
+    400094: L_Greif_h1
+    400096: L_Greif_h2
+    400098: L_Greif_h3
+    400100: L_Greif_h3_end
+    400102: L_Greif_v1
+    400104: L_Greif_v2
+    400106: L_Hand_h
+    400108: L_Hand_v
+    400110: L_Oberarm
+    400112: L_Rib
+    400114: L_Schulter
+    400116: L_Unterarm
+    400118: Main
+    400120: ORG-Bone
+    400122: ORG-Bone.001
+    400124: ORG-Bone.002
+    400126: ORG-Bone.003
+    400128: ORG-Bone.004
+    400130: ORG-Bone.005
+    400132: ORG-Bone.006
+    400134: ORG-Bone.007
+    400136: ORG-Bone.008
+    400138: ORG-Bone.008_end
+    400140: ORG-Bone.009
+    400142: ORG-Bone.010
+    400144: ORG-Bone.011
+    400146: ORG-Bone.012
+    400148: ORG-Bone.012_end
+    400150: ORG-Bone.013
+    400152: ORG-Bone.013_end
+    400154: ORG-Bone.014
+    400156: ORG-Bone.015
+    400158: ORG-Bone.016
+    400160: ORG-Bone.017
+    400162: ORG-Bone.018
+    400164: ORG-Bone.019
+    400166: ORG-Bone.020
+    400168: ORG-Bone.020_end
+    400170: ORG-Bone.021
+    400172: ORG-Bone.022
+    400174: ORG-Bone.023
+    400176: ORG-Bone.024
+    400178: ORG-Bone.024_end
+    400180: ORG-Bone.025
+    400182: ORG-Bone.025_end
+    400184: R_Hand_h
+    400186: R_Hand_h1
+    400188: R_Hand_h2
+    400190: R_Hand_h3
+    400192: R_Hand_h3_end
+    400194: R_Hand_v
+    400196: R_Hand_v1
+    400198: R_Hand_v2
+    400200: R_Hand_v3
+    400202: R_Hand_v3_end
+    400204: R_Oberarm
+    400206: R_Rib
+    400208: R_Schulter
+    400210: R_Unterarm
+    400212: rig
+    400214: root
+    400216: WGT-rig_root
+    400218: WGTS_rig
     2000000: Camera
     2100000: No Name
     2100002: Material
@@ -34,6 +234,8 @@ ModelImporter:
     2300008: Arm_R
     2300010: Hand_L
     2300012: Hand_R
+    2300014: WGT-rig_root
+    2300016: WGTS_rig
     3300000: Cylinder
     3300002: Body
     3300004: Cube
@@ -41,6 +243,8 @@ ModelImporter:
     3300008: Arm_R
     3300010: Hand_L
     3300012: Hand_R
+    3300014: WGT-rig_root
+    3300016: WGTS_rig
     4300000: Cylinder
     4300002: Body
     4300004: Cube
@@ -48,7 +252,12 @@ ModelImporter:
     4300008: Hand_R
     4300010: Arm_L
     4300012: Hand_L
+    4300014: WGTS_rig
+    4300016: WGT-rig_root
+    9500000: //RootNode
     10800000: Light
+    13700000: Body
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,7 +278,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -102,7 +311,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -126,10 +335,10 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
