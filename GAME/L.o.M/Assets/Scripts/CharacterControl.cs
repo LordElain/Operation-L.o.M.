@@ -25,6 +25,7 @@ public class CharacterControl : MonoBehaviour
     public float turnSpeed = 4.0f;
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
+    public int playerMaxHealth = 5;
     public int playerHealth = 5;
     private float newstraffe;
     private float newtranslation;
@@ -47,6 +48,8 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (playerHealth > playerMaxHealth)                                             // Wenn Spieler mit 5 HP ein collectible aufhebt geht max HP auf 4, daher muss auch momentane HP auf 4 gehen
+            playerHealth = playerMaxHealth;
         if (playerHealth == 0)
             alive = false;
         if (alive)
