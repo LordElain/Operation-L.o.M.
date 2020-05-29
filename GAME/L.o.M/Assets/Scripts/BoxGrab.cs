@@ -11,7 +11,7 @@ public class BoxGrab : MonoBehaviour
     {
         Boden = Vector3.zero;
     }
-    GameObject GetMouseHoverObject(float range)
+    GameObject GetMouseHoverObject(float range)                                                     //Funktion checkt was für ein Objekt sich vor der Kamera befindet und gibt dieses Gameobjekt zurück
     {
         Vector3 position = gameObject.transform.position;
         RaycastHit raycastHit;
@@ -23,7 +23,7 @@ public class BoxGrab : MonoBehaviour
         return null;
     }
 
-    void TryGrabObject(GameObject grabObject)
+    void TryGrabObject(GameObject grabObject)                                                       //Funktion probiert ob ein greifbares Objekt vorhanden ist
     {
         if (grabObject == null ||!CanGrab(grabObject))
             return;
@@ -31,24 +31,24 @@ public class BoxGrab : MonoBehaviour
         grabbedObject = grabObject;
     }
 
-    bool CanGrab(GameObject candidate)
+    bool CanGrab(GameObject candidate)                                                              //Funktion gibt nur true wenn Objekt "box" ist, also auch greifbar      
     {
         return candidate.CompareTag("box");
     }
 
-    void DropObject()
+    void DropObject()                                                                               // Wenn man schon ein Objekt hält wird wird es gedropped sonst einfach return
     {
         if (grabbedObject == null)
             return;
 
         if (grabbedObject.GetComponent<Rigidbody>() != null)
-            grabbedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            grabbedObject.GetComponent<Rigidbody>().velocity = Vector3.zero;                        //Wenn das gegriffene Objekt einen Rigidbody hat wird dessen velocitiy auf 0 gesetzt damit es nicht wild wegfliegt wenn amn es loslässt
         grabbedObject = null;
     }
     
     void Update()
     {
-        if (Input.GetKey("e"))
+        if (Input.GetKey("e"))                                                                      //Wenn "e" wird gegriffen, wenn schon ein grabbedObject da ist wird fallengelassen
         {
             if (grabbedObject == null)
                 TryGrabObject(GetMouseHoverObject(5));
@@ -58,8 +58,8 @@ public class BoxGrab : MonoBehaviour
 
         if(grabbedObject != null)
         {
-            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * 3;
-            if (grabbedObject.transform.position.y >= 0.5)
+            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * 3;                //Wie weit das gegrabbete Objekt vor dem Spieler ist
+            if (grabbedObject.transform.position.y >= 0.5)                                                          //Behält gegriffenes Objekt direkt vor dem Spieler
                 grabbedObject.transform.position = newPosition;
             else
             {
