@@ -31,6 +31,7 @@ public class Animations_Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             animatorComp.SetBool("Crouch_Status", true);
+            animatorComp.SetBool("Idle_Status", false);
             animatorComp.SetTrigger("Crouch");
             
         }
