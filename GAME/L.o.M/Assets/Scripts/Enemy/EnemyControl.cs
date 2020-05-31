@@ -11,10 +11,12 @@ public class EnemyControl : MonoBehaviour
     public GameObject player;
     public Transform target;
     NavMeshAgent agent;
+    public bool attackStatus;
     void Start()
     {
         enemyhealth = 2;
         agent = GetComponent<NavMeshAgent>();
+        attackStatus = false;
     }
 
     // Update is called once per frame
@@ -50,6 +52,7 @@ public class EnemyControl : MonoBehaviour
         }
         if (other.gameObject.CompareTag("player"))
         {
+            attackStatus = true;
             PlayerScript.playerHealth--;                                              //Ziehe bei Kontakt spieler ein HP ab und setze speed auf 0
             agent.speed = 0.0f;
             Debug.Log("Spieler hat " + PlayerScript.playerHealth + " HP");
