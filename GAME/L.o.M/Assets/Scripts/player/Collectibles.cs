@@ -22,8 +22,11 @@ public class Collectibles : MonoBehaviour
     {
         //Handle collection points here!
         CharacterControl PlayerScript = Player.GetComponent<CharacterControl>();
-        PlayerScript.playerMaxHealth--;
-        PlayerScript.SlowDown();
-        Destroy(this.gameObject);
+        if (other.gameObject.CompareTag("player"))
+        {
+            PlayerScript.playerMaxHealth--;
+            PlayerScript.SlowDown();
+            Destroy(this.gameObject);
+        }
     }
 }
