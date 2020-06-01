@@ -7,7 +7,7 @@ public class Follow : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform target;
-    public bool detectPlayer;
+    public bool detectPlayer = false;
     private float waitTime;
     public float startWaitTime;
     public Transform[] moveSpots;

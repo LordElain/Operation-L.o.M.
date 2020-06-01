@@ -11,7 +11,7 @@ public class EnemyControl : MonoBehaviour
     public GameObject player;
     public Transform target;
     NavMeshAgent agent;
-    public bool attackStatus;
+    public bool attackStatus = false;
     void Start()
     {
         enemyhealth = 2;

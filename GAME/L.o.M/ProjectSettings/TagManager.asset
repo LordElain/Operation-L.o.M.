@@ -9,6 +9,7 @@ TagManager:
   - Char
   - player
   - box
+  - Enemy
   layers:
   - Default
   - TransparentFX

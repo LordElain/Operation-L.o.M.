@@ -5,20 +5,22 @@ using UnityEngine;
 public class Enemy_Animation : MonoBehaviour
 {
     private Animator animatorComp = null;
-    public Follow Enemy;
-    public EnemyControl Attack;
+    public GameObject Following;
+    public GameObject Attack;
     // Start is called before the first frame update
     void Start()
     {
-        Enemy = GetComponent<Follow>();
         animatorComp = GetComponent<Animator>();
-        Attack = GetComponent<EnemyControl>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (Enemy.detectPlayer == true)
+        Follow FollowScript = Following.GetComponent<Follow>();
+        EnemyControl AttackScript = Attack.GetComponent<EnemyControl>();
+        Debug.Log(FollowScript.detectPlayer);
+        if (FollowScript.detectPlayer == true)
         {
             animatorComp.SetTrigger("Run");
             animatorComp.SetBool("Idle_Status", false);
@@ -30,14 +32,14 @@ public class Enemy_Animation : MonoBehaviour
             animatorComp.SetBool("Run_Status", false);
         }
 
-        if (Attack.attackStatus != true)
-        {
-            animatorComp.SetBool("Idle_Status", true);
-        }
-        else
+        if (AttackScript.attackStatus == true)
         {
             animatorComp.SetTrigger("Attack");
             animatorComp.SetBool("Idle_Status", false);
+        }
+        else
+        {
+            animatorComp.SetBool("Idle_Status", true);
         }
     }
 }
