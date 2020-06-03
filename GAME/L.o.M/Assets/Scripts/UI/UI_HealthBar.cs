@@ -21,10 +21,10 @@ public class UI_HealthBar : MonoBehaviour
         Follow FollowScript = Following.GetComponent<Follow>();
         CharacterControl PlayerScript = Player.GetComponent<CharacterControl>();
 
-        if (PlayerScript.playerHealth == 5)
-        {
-            HUDScript.Hea
-        }
+        //if (PlayerScript.playerHealth == 5)
+        //{
+        //    HUDScript.hea
+        //}
 
 
     }

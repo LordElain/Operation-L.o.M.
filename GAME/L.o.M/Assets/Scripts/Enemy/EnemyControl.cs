@@ -55,7 +55,7 @@ public class EnemyControl : MonoBehaviour
             attackStatus = true;
             PlayerScript.playerHealth--;                                              //Ziehe bei Kontakt spieler ein HP ab und setze speed auf 0
             agent.speed = 0.0f;
-            Debug.Log(attackStatus);
+            //Debug.Log(attackStatus);
             Debug.Log("Spieler hat " + PlayerScript.playerHealth + " HP");
         }
     }

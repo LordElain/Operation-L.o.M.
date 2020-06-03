@@ -18,7 +18,7 @@ public class Enemy_Animation : MonoBehaviour
     {
         Follow FollowScript = Following.GetComponent<Follow>();
         EnemyControl AttackScript = Attacking.GetComponent<EnemyControl>();
-        Debug.Log(FollowScript.detectPlayer);
+        //Debug.Log(FollowScript.detectPlayer);
         if (FollowScript.detectPlayer == true)
         {
             animatorComp.SetTrigger("Run");
