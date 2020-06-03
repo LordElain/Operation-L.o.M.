@@ -16,7 +16,7 @@ public class Enemy_Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Follow FollowScript = Following.GetComponent<Follow>();
+        Follow_R FollowScript = Following.GetComponent<Follow_R>();
         EnemyControl AttackScript = Attacking.GetComponent<EnemyControl>();
         //Debug.Log(FollowScript.detectPlayer);
         if (FollowScript.detectPlayer == true)
