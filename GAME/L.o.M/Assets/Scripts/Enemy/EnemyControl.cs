@@ -9,6 +9,7 @@ public class EnemyControl : MonoBehaviour
     public int enemyhealth;
     public GameObject Weapon;
     public GameObject player;
+
     public Transform target;
     NavMeshAgent agent;
     public bool attackStatus = false;
@@ -32,6 +33,7 @@ public class EnemyControl : MonoBehaviour
     {
         Animation_Attack WeaponScript = Weapon.GetComponent<Animation_Attack>();
         CharacterControl PlayerScript = player.GetComponent<CharacterControl>();
+
         if (other.gameObject.CompareTag("weapon"))                                      //Wird nur ausgeführt wenn Gameobject den tag 'Weapon' hat
         {
             if (WeaponScript.canhit)
@@ -53,6 +55,7 @@ public class EnemyControl : MonoBehaviour
         if (other.gameObject.CompareTag("player"))
         {
             attackStatus = true;
+
             PlayerScript.playerHealth--;                                              //Ziehe bei Kontakt spieler ein HP ab und setze speed auf 0
             agent.speed = 0.0f;
             //Debug.Log(attackStatus);

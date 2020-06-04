@@ -41,7 +41,7 @@ public class UI_HealthBar : MonoBehaviour
     void Update()
     {
         Canvas HUDScript = HUD.GetComponent<Canvas>();
-        Follow_R FollowScript = Following.GetComponent<Follow_R>();
+        Follow FollowScript = Following.GetComponent<Follow>();
         CharacterControl PlayerScript = Player.GetComponent<CharacterControl>();
         Canvas AlertScript = Alert.GetComponent<Canvas>();
 
@@ -62,39 +62,36 @@ public class UI_HealthBar : MonoBehaviour
         Canvas Leben4Script = Leben4.GetComponent<Canvas>();
         Canvas Verloren4Script = Verloren4.GetComponent<Canvas>();
 
-
-        /*
-                if (PlayerScript.playerHealth == 5)
-                {
-                    HUDScript.enabled = true;
-
-                }
-                else if(PlayerScript.playerHealth == 4)
-                {
-                    Leben0Script.enabled = false;
-                    Verloren0Script.enabled = true;
-                }
-                else if (PlayerScript.playerHealth == 3)
-                {
-                    Leben1Script.enabled = false;
-                    Verloren1Script.enabled = true;
-                }
-                else if(PlayerScript.playerHealth == 2)
-                {
-                    Leben2Script.enabled = false;
-                    Verloren2Script.enabled = true;
-                }
-                else if (PlayerScript.playerHealth == 1)
-                {
-                    Leben3Script.enabled = false;
-                    Verloren3Script.enabled = true;
-                }
-                else if(PlayerScript.playerHealth == 0)
-                {
-                    Leben4Script.enabled = false;
-                    Verloren4Script.enabled = true;
-                }
-                */
+        switch (PlayerScript.playerHealth)
+        {
+            case 5:
+                HUDScript.enabled = true;
+                break;
+            case 4:
+                Leben0Script.enabled = false;
+                Verloren0Script.enabled = true;
+                break;
+            case 3:
+                Leben1Script.enabled = false;
+                Verloren1Script.enabled = true;
+                break;
+            case 2:
+                Leben2Script.enabled = false;
+                Verloren2Script.enabled = true;
+                break;
+            case 1:
+                Leben3Script.enabled = false;
+                Verloren3Script.enabled = true;
+                break;
+            case 0:
+                Leben4Script.enabled = false;
+                Verloren4Script.enabled = true;
+                break;
+            default:
+                break;
+        }
+ 
+                
 
         // ALERTA ALERTA
         if (FollowScript.detectPlayer == true)

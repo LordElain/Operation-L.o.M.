@@ -23,6 +23,7 @@ public class Follow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("ALERTA" + detectPlayer);
         if (detectPlayer)
             agent.SetDestination(target.position);                                                      //Wenn Player gesehen dann verfolge Player
         else
