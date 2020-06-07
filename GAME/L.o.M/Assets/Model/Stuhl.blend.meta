@@ -9,28 +9,39 @@ ModelImporter:
     100006: Sitz
     100008: Stangen
     100010: //RootNode
+    100012: Lehne
+    100014: Platten Halter
     400000: Beine
     400002: Cube
     400004: Cube.001
     400006: Sitz
     400008: Stangen
     400010: //RootNode
+    400012: Lehne
+    400014: Platten Halter
     2100000: No Name
     2300000: Beine
     2300002: Cube
     2300004: Cube.001
     2300006: Sitz
     2300008: Stangen
+    2300010: Lehne
+    2300012: Platten Halter
     3300000: Beine
     3300002: Cube
     3300004: Cube.001
     3300006: Sitz
     3300008: Stangen
+    3300010: Lehne
+    3300012: Platten Halter
     4300000: Beine
     4300002: Sitz
     4300004: Stangen
     4300006: Cube
     4300008: Cube.001
+    4300010: Lehne
+    4300012: Platten Halter
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -71,22 +82,22 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVAngleDistortion: 75
+    secondaryUVAreaDistortion: 75
+    secondaryUVHardAngle: 110
+    secondaryUVPackMargin: 64
     useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 70
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
