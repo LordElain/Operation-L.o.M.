@@ -12,6 +12,7 @@ ModelImporter:
     2300000: default
     3300000: default
     4300000: default
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -59,10 +60,10 @@ ModelImporter:
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15
+    secondaryUVAngleDistortion: 75
+    secondaryUVAreaDistortion: 75
     secondaryUVHardAngle: 130
-    secondaryUVPackMargin: 4
+    secondaryUVPackMargin: 54
     useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0

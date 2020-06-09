@@ -91,14 +91,14 @@ ModelImporter:
     indexFormat: 0
     secondaryUVAngleDistortion: 75
     secondaryUVAreaDistortion: 75
-    secondaryUVHardAngle: 110
+    secondaryUVHardAngle: 180
     secondaryUVPackMargin: 64
     useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 70
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
