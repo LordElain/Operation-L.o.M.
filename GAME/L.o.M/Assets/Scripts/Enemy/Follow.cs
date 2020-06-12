@@ -7,11 +7,12 @@ public class Follow : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform target;
-    public bool detectPlayer = false;
+    public bool detectPlayer;
     private float waitTime;
     public float startWaitTime;
     public Transform[] moveSpots;
     public int Spot;
+    public bool Idle;
     NavMeshAgent agent;
     void Start()
     {
@@ -19,6 +20,7 @@ public class Follow : MonoBehaviour
         detectPlayer = false;
         Spot = 0;
         waitTime = 2;
+        Idle = true;
     }
 
     // Update is called once per frame
@@ -38,18 +40,22 @@ public class Follow : MonoBehaviour
                     {
                         Spot = 0;
                         waitTime = startWaitTime;
+                        
+                     
                     }
                     else
                     {
                         waitTime = startWaitTime;
                         Spot++;                                                                        //Gehe alle movespots durch
                         Debug.Log(Spot);
+                        Idle = false;
                     }
                 }
                 else
                 {
                     waitTime -= Time.deltaTime;                                                         //Reduziere die Wartezeit
                     Debug.Log(Spot);
+                    Idle = true;
                 }
             }
 

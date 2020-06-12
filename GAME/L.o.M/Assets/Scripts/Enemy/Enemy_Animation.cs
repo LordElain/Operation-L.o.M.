@@ -7,6 +7,7 @@ public class Enemy_Animation : MonoBehaviour
     private Animator animatorComp = null;
     public GameObject Following;
     public GameObject Attacking;
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,9 @@ public class Enemy_Animation : MonoBehaviour
     {
         Follow FollowScript = Following.GetComponent<Follow>();
         EnemyControl AttackScript = Attacking.GetComponent<EnemyControl>();
+
         //Debug.Log(FollowScript.detectPlayer);
-        if (FollowScript.detectPlayer == true)
+        if (FollowScript.detectPlayer == true || FollowScript.Idle == false)
         {
             animatorComp.SetTrigger("Run");
             animatorComp.SetBool("IdleStatus", false);
