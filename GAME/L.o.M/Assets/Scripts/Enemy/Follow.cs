@@ -17,28 +17,34 @@ public class Follow : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         detectPlayer = false;
-        Spot = 0;                                            
+        Spot = 0;
+        waitTime = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("ALERTA" + detectPlayer);
         if (detectPlayer)
             agent.SetDestination(target.position);                                                      //Wenn Player gesehen dann verfolge Player
         else
-        {                                                                                           //Wenn nicht gehe zum vorher ausgesuchten Movespot
+        {                                                                                               //Wenn nicht gehe zum vorher ausgesuchten Movespot
             agent.SetDestination(moveSpots[Spot].position);
-            if (Vector3.Distance(transform.position, moveSpots[Spot].position) < 0.2f)        //Wenn nah genug (0.2f, nicht 1:1 auf dem Punkt, kann leicht zu fehlern führen) dann
+            Debug.Log(Vector3.Distance(transform.position, moveSpots[Spot].position));
+            if (Vector3.Distance(transform.position, moveSpots[Spot].position) < 0.5f)                  //Wenn nah genug (0.2f, nicht 1:1 auf dem Punkt, kann leicht zu fehlern führen) dann
             {
                 if (waitTime <= 0)                                                                  
                 {
-                    if (Spot >= 6)
+                    if (Spot >= moveSpots.Length - 1)
+                    {
                         Spot = 0;
+                        waitTime = startWaitTime;
+                    }
                     else
-                        Spot++;                                                                         //Gehe die movespots von 0 bis 6 durch
-                    waitTime = startWaitTime;
-                    Debug.Log(Spot);
+                    {
+                        waitTime = startWaitTime;
+                        Spot++;                                                                        //Gehe alle movespots durch
+                        Debug.Log(Spot);
+                    }
                 }
                 else
                 {
