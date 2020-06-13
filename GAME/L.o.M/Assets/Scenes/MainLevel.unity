@@ -3179,6 +3179,7 @@ MonoBehaviour:
   - {fileID: 1077527454}
   - {fileID: 255751825}
   Spot: 0
+  EnemyIdle: 0
 --- !u!114 &184506375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3193,7 +3194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1531567579}
   detectPlayer: 0
-  startWaitTime: 2
+  startWaitTime: 5
   moveSpots:
   - {fileID: 688595936}
   - {fileID: 1320089219}
@@ -6968,6 +6969,7 @@ MonoBehaviour:
   - {fileID: 1077527454}
   - {fileID: 255751825}
   Spot: 0
+  EnemyIdle: 0
 --- !u!114 &466307507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20728,6 +20730,7 @@ MonoBehaviour:
   - {fileID: 1684528082}
   - {fileID: 1679045942}
   Spot: 0
+  EnemyIdle: 0
 --- !u!1 &1430186629
 GameObject:
   m_ObjectHideFlags: 0

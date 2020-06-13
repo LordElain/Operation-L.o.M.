@@ -42,7 +42,7 @@ public class EnemyControl : MonoBehaviour
                 {
                     if (WeaponScript.hashit)
                         enemyhealth--;
-                    Debug.Log(enemyhealth);
+                    Debug.Log("Enemy Health" + enemyhealth);
                     WeaponScript.hashit = false;
                 }
                 else if (enemyhealth == 0)
