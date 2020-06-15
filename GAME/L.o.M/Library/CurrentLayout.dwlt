@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 420
     height: 592
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 883, y: 498}
-  m_MaxSize: {x: 16008, y: 14048}
+  m_MinSize: {x: 885, y: 498}
+  m_MaxSize: {x: 16010, y: 14048}
   vertical: 0
-  controlID: 311
+  controlID: 128
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,10 +163,10 @@ MonoBehaviour:
     y: 0
     width: 1528
     height: 947
-  m_MinSize: {x: 606, y: 498}
-  m_MaxSize: {x: 12006, y: 14048}
+  m_MinSize: {x: 608, y: 498}
+  m_MaxSize: {x: 12008, y: 14048}
   vertical: 1
-  controlID: 312
+  controlID: 129
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,10 +189,10 @@ MonoBehaviour:
     y: 0
     width: 1528
     height: 592
-  m_MinSize: {x: 606, y: 224}
-  m_MaxSize: {x: 12006, y: 4024}
+  m_MinSize: {x: 608, y: 224}
+  m_MaxSize: {x: 12008, y: 4024}
   vertical: 0
-  controlID: 313
+  controlID: 130
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,8 +212,8 @@ MonoBehaviour:
     y: 0
     width: 269
     height: 592
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -440,10 +440,10 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 437}
-      m_SelectedIDs: 30320000
-      m_LastClickedID: 12848
-      m_ExpandedIDs: defbffff222e00002e2e0000962e0000323000008636000046380000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: defbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -498,9 +498,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.0550385, y: -0.6818099, z: 41.92456}
+    m_Target: {x: -4.903492, y: -0.25165558, z: 42.727554}
     speed: 2
-    m_Value: {x: -6.0550385, y: -0.6818099, z: 41.92456}
+    m_Value: {x: -4.903492, y: -0.25165558, z: 42.727554}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -528,9 +528,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.012099163, y: -0.72632015, z: -0.01278956, w: 0.6871311}
+    m_Target: {x: 0.07595119, y: -0.69828695, z: 0.074927665, w: 0.7078225}
     speed: 2
-    m_Value: {x: -0.012099163, y: -0.72632015, z: -0.01278956, w: 0.6871311}
+    m_Value: {x: 0.07595119, y: -0.69828695, z: 0.074927665, w: 0.7078225}
   m_Size:
     m_Target: 3.4613287
     speed: 2
@@ -691,21 +691,21 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts/Respawner
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/Respawner
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sttidenn\Documents\Documents\Studium\Semester4\GE\Projekt
     L.o.M\Operation-L.o.M\GAME\L.o.M
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ce260000
-    m_LastClickedID: 9934
-    m_ExpandedIDs: 00000000ce26000040290000782900009e2b000000ca9a3b
+    scrollPos: {x: 0, y: 34}
+    m_SelectedIDs: 642c0000
+    m_LastClickedID: 11364
+    m_ExpandedIDs: 00000000ce260000d227000040290000782900009e2b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +760,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 12848
+  m_LastSelectedObjectID: 13340
 --- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52

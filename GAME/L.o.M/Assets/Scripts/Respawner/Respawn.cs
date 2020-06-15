@@ -12,12 +12,15 @@ public class Respawn : MonoBehaviour
     public GameObject enemy3new;
     public GameObject Regal;
     public GameObject Goal;
-    
-    float speed = 3f;
+    public GameObject Player;
 
-    private void OnCollisionEnter(Collision collision)
+    bool entered = false;
+    
+    float speed = 1f;                                                   // Wie Schnell wird das Regal bewegt
+
+    private void FixedUpdate()
     {
-        if (collision.gameObject.CompareTag("player"))
+        if (Vector3.Distance(Player.transform.position,this.transform.position) < 2)
         {
             if (!enemy1)                                                //Wenn es das gameobject nicht gibt wenn man durch den trigger läuft wird der neue auf active gesetzt
                 enemy1new.SetActive(true);
@@ -25,17 +28,17 @@ public class Respawn : MonoBehaviour
                 enemy2new.SetActive(true);
             if (!enemy3)
                 enemy3new.SetActive(true);
-            
-            if(enemy1 && enemy2 && enemy3)
+            entered = true;
+        }
+        if (entered)
+        {
+            if (enemy1 && enemy2 && enemy3)
             {
-                for (float i = Regal.transform.position.z; i > Goal.transform.position.z;)
-                { float step = speed * Time.deltaTime;
-                    Regal.transform.position = Vector3.MoveTowards(Regal.transform.position, Goal.transform.position, step);
-                    i = Regal.transform.position.z;
-                    Debug.Log("Bewege Regal");
-                }
+                float step = speed * Time.deltaTime;
+                Regal.transform.position = Vector3.MoveTowards(Regal.transform.position, Goal.transform.position, step);            //Bewegt Regal von seiner Position zur Goal position
+                Debug.Log("Bewege Regal");
             }
-
+            if(Regal.transform.position == Goal.transform.position)
             Destroy(this.gameObject);
         }
     }
