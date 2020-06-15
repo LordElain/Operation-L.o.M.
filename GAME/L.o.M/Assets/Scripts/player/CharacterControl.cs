@@ -48,6 +48,41 @@ public class CharacterControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            if (Input.GetKeyDown("escape"))
+            {
+                // turn on the cursor
+                Cursor.lockState = CursorLockMode.None;
+            }
+
+            //checks if the player is on the ground when the "Jump" button is pressed
+            if (Input.GetButton("Jump") && onGround == true)
+            {
+                //adds force to player on the y axis by using the flaot set for the variable jumpForce. Causes the player to jump
+                player.velocity = new Vector3(0f, jumpForce, 0f);
+                //says the player is no longer on the ground
+                onGround = false;
+            }
+
+            posChange = new Vector3(0f, -0.25f, 0f);                                    //Vektor für Position ändern
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouching = true;                                                       //Hitbox und Position werden verringert, crouching auf true für sliding später mal
+                Controller.height *= 0.5f;
+                this.transform.localPosition += posChange;
+            }
+
+            if (Input.GetButtonUp("Crouch"))
+            {
+                Controller.height *= 2;                                                 //Hitbox und Position wieder normal gemacht, crouchng wieder für sliding
+                this.transform.localPosition -= posChange;
+                crouching = false;
+            }
+        MouseAiming();
+    }
+
+    void FixedUpdate()
+    {
         if (playerHealth > playerMaxHealth)                                             // Wenn Spieler mit 5 HP ein collectible aufhebt geht max HP auf 4, daher muss auch momentane HP auf 4 gehen
             playerHealth = playerMaxHealth;
         if (playerHealth == 0)
@@ -93,8 +128,8 @@ public class CharacterControl : MonoBehaviour
                 speedchange = false;
                 if (newtranslation > 0.001f || newtranslation > 0.001f)
                 {
-                    newstraffe -= (straffe*0.4f) * Time.deltaTime;
-                    newtranslation -= (translation*0.4f) * Time.deltaTime;
+                    newstraffe -= (straffe * 0.4f) * Time.deltaTime;
+                    newtranslation -= (translation * 0.4f) * Time.deltaTime;
                     //Debug.Log("If ausgeführt");
                 }
                 transform.Translate(newstraffe, 0, newtranslation);
@@ -105,46 +140,9 @@ public class CharacterControl : MonoBehaviour
                 transform.Translate(straffe, 0, translation);                   //Kombination von beiden Berechnungen um Bewegunng zu erzeugen
                 speedchange = true;
             }
-
-
-            if (Input.GetKeyDown("escape"))
-            {
-                // turn on the cursor
-                Cursor.lockState = CursorLockMode.None;
-            }
-
-            //checks if the player is on the ground when the "Jump" button is pressed
-            if (Input.GetButton("Jump") && onGround == true)
-            {
-                //adds force to player on the y axis by using the flaot set for the variable jumpForce. Causes the player to jump
-                player.velocity = new Vector3(0f, jumpForce, 0f);
-                //says the player is no longer on the ground
-                onGround = false;
-            }
-
-            posChange = new Vector3(0f, -0.25f, 0f);                                    //Vektor für Position ändern
-
-            if (Input.GetButtonDown("Crouch"))
-            {
-                crouching = true;                                                       //Hitbox und Position werden verringert, crouching auf true für sliding später mal
-                Controller.height *= 0.5f;
-                this.transform.localPosition += posChange;
-            }
-
-            if (Input.GetButtonUp("Crouch"))
-            {
-                Controller.height *= 2;                                                 //Hitbox und Position wieder normal gemacht, crouchng wieder für sliding
-                this.transform.localPosition -= posChange;
-                crouching = false;
-            }
-
-            MouseAiming();
-        }
-        else
-        {
-                                                                                        //Hier kommt rein was passiert wenn man keine HP mehr hat
         }
 
+        
     }
 
     void MouseAiming()

@@ -23,7 +23,7 @@ public class Follow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (detectPlayer)
             agent.SetDestination(target.position);                                                      //Wenn Player gesehen dann verfolge Player
@@ -36,7 +36,7 @@ public class Follow : MonoBehaviour
             if (Vector3.Distance(transform.position, moveSpots[Spot].position) < 0.5f)                  //Wenn nah genug (0.2f, nicht 1:1 auf dem Punkt, kann leicht zu fehlern führen) dann
             {
                 EnemyIdle = false;
-                Debug.Log("Idle " + EnemyIdle);
+                //Debug.Log("Idle " + EnemyIdle);
                 if (waitTime <= 0)                                                                  
                 {
                     if (Spot >= moveSpots.Length - 1)
@@ -56,7 +56,7 @@ public class Follow : MonoBehaviour
                     EnemyIdle = true;
                     waitTime -= Time.deltaTime;
                    // Debug.Log("Waittime " + waitTime);
-                    Debug.Log("EnemyIdleWaittime " + EnemyIdle);
+                    //Debug.Log("EnemyIdleWaittime " + EnemyIdle);
 
                     //Reduziere die Wartezeit
                     //Debug.Log("Reduziere Wartezeit" + Spot);

@@ -35,13 +35,13 @@ public class Enemy_Animation : MonoBehaviour
         if (FollowScript.EnemyIdle == true)
         {
             animatorComp.SetBool("IdleStatus", true);
-            Debug.Log("Animation Idle True" + FollowScript.EnemyIdle);
+            //Debug.Log("Animation Idle True" + FollowScript.EnemyIdle);
             animatorComp.SetBool("RunStatus", false);
             
         }
         else
         {
-            Debug.Log("Animation Idle False" + FollowScript.EnemyIdle);
+            //Debug.Log("Animation Idle False" + FollowScript.EnemyIdle);
             animatorComp.SetTrigger("Run");
             animatorComp.SetBool("IdleStatus", false);
             animatorComp.SetBool("RunStatus", true);

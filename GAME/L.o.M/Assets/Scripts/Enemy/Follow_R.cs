@@ -39,20 +39,13 @@ public class Follow_R : MonoBehaviour
     //}
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(detectPlayer)
         agent.SetDestination(target.position);                                                      //Wenn Player gesehen dann verfolge Player
         else
         {                                                                                           //Wenn nicht gehe zum vorher ausgesuchten Movespot
             agent.SetDestination(moveSpots[randomSpot].position);
-            //if (isWall(GetWallObject(Vector3.Distance(transform.position, moveSpots[randomSpot].position))))
-            //{
-            //    Debug.Log("WAND DAZWISCHEN");
-            //    randomSpot = Random.Range(0, moveSpots.Length);
-            //}
-            //else
-            //{
                 if (Vector3.Distance(transform.position, moveSpots[randomSpot].position) < 0.5f)        //Wenn nah genug (0.2f, nicht 1:1 auf dem Punkt, kann leicht zu fehlern führen) dann
                 {
                     if (waitTime <= 0)                                                                  //Randomize einen neuen Punkt wenn Wartezeit abgelaufen sonst
