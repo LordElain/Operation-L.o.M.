@@ -157,7 +157,7 @@ public class CharacterControl : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //checks if collider is tagged "ground"
-        if (other.gameObject.CompareTag("ground"))
+        if (other.gameObject.CompareTag("ground") || other.gameObject.CompareTag("box"))
         {
             //if the collider is tagged "ground", sets onGround boolean to true
             onGround = true;

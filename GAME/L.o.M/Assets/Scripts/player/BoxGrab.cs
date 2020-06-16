@@ -58,7 +58,7 @@ public class BoxGrab : MonoBehaviour
 
         if(grabbedObject != null)
         {
-            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * 3;                //Wie weit das gegrabbete Objekt vor dem Spieler ist                                                       
+            Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * 2;                //Wie weit das gegrabbete Objekt vor dem Spieler ist                                                       
             grabbedObject.transform.position = newPosition;                                                         //Behält gegriffenes Objekt direkt vor dem Spieler
         }
     }
