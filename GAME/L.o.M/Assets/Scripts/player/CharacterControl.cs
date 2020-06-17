@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CharacterControl : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class CharacterControl : MonoBehaviour
     private float newstraffe;
     private float newtranslation;
     CapsuleCollider Controller;
+    AudioSource audioData;
+    public AudioClip Jump;
+    public AudioClip Run;
+
 
     // Use this for initialization
     void Start()
@@ -43,6 +48,8 @@ public class CharacterControl : MonoBehaviour
         Controller = GetComponent<CapsuleCollider>();
         speedx = speedz = speed;
         alive = true;
+        audioData = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -61,6 +68,7 @@ public class CharacterControl : MonoBehaviour
                 player.velocity = new Vector3(0f, jumpForce, 0f);
                 //says the player is no longer on the ground
                 onGround = false;
+               
             }
 
             posChange = new Vector3(0f, -0.25f, 0f);                                    //Vektor für Position ändern
@@ -92,6 +100,7 @@ public class CharacterControl : MonoBehaviour
             if (onGround == true)
             {
                 moving = true;
+               
                 if (!wasinair)
                     speedx = speed;
                 wasinair = true;
@@ -100,12 +109,14 @@ public class CharacterControl : MonoBehaviour
                     speedx *= 2.0f;
                     speedz *= 2.0f;
                     sprinting = true;
+                    audioData.PlayOneShot(Run, 0.5f);
                 }
                 else if (Input.GetButtonUp("Sprint"))                                   //Alle Geschwindigkeiten wieder normalisieren, sprinting für sliden ändern
                 {
                     speedx = speed;
                     speedz = speed;
                     sprinting = false;
+                    audioData.Stop();
                 }
             }
             else
@@ -161,6 +172,11 @@ public class CharacterControl : MonoBehaviour
         {
             //if the collider is tagged "ground", sets onGround boolean to true
             onGround = true;
+            if (wasinair == false)
+            {
+                audioData.PlayOneShot(Jump, 0.5f);
+            }
+            
         }
     }
 
