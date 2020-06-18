@@ -212,8 +212,9 @@ public class CharacterControl : MonoBehaviour
 
     public void SlowDown()
     {
-        speed *= 0.5f;
-        speedx = speedz = speed;
+        speed *= 0.8f;
+        speedx = speed; 
+        speedz = speed;
     }
 
 }

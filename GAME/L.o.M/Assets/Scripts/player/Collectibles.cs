@@ -16,7 +16,7 @@ public class Collectibles : MonoBehaviour
 
     void Update()
     {
-        this.transform.rotation *= Quaternion.Euler(Time.deltaTime * m_rotationspeed, 0, 0);
+        this.transform.rotation *= Quaternion.Euler(0, 0, Time.deltaTime * m_rotationspeed);
     }
     private void OnTriggerEnter(Collider other)
     {
