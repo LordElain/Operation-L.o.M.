@@ -26,6 +26,7 @@ public class Collectibles : MonoBehaviour
         {
             PlayerScript.playerMaxHealth--;
             PlayerScript.SlowDown();
+            PlayerScript.score++;
             Destroy(this.gameObject);
         }
     }

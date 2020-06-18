@@ -1,41 +1,59 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;                                                      //SceneManagement benutzen damit szene neu geladen werden kann
 
 public class CharacterControl : MonoBehaviour
 {
   
     public float speed = 4.0f;
+
     public bool moving = false;
+    
     private float speedx;
     private float speedz;
     private float translation;
     private float straffe;
+    
     Rigidbody player; //allows what rigidbody the player will be
+    
     public float jumpForce = 10f; //how much force you want when jumping
+    
     private bool onGround; //allows the functions to determine whether player is on the ground or not
     private bool crouching;
     private bool sprinting;
     private bool wasinair;
-    private bool alive;
+    public bool alive;
     private bool speedchange = true;
+    public bool gameEnd;
+    
     private Vector3 posChange;
+    
     public float turnSpeed = 4.0f;
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
+    private float time;
+    
     public int playerMaxHealth = 5;
     public int playerHealth = 5;
+    public int score;
+    
     private float newstraffe;
     private float newtranslation;
+    
     CapsuleCollider Controller;
+    
     AudioSource audioData;
+    
     public AudioClip Jump;
     public AudioClip Run;
 
-
+    public Text GameOver;
     // Use this for initialization
     void Start()
     {      
@@ -49,7 +67,8 @@ public class CharacterControl : MonoBehaviour
         speedx = speedz = speed;
         alive = true;
         audioData = GetComponent<AudioSource>();
-
+        gameEnd = false;
+        score = 0;
     }
 
     // Update is called once per frame
@@ -95,7 +114,17 @@ public class CharacterControl : MonoBehaviour
             playerHealth = playerMaxHealth;
         if (playerHealth == 0)
             alive = false;
-        if (alive)
+        if (gameEnd)
+        {
+            GameOver.text = "You Won! Your Score was: " + score + Environment.NewLine + "Your time was " + time;
+        }
+        else if (!alive)
+        {
+            GameOver.text = "Game Over!" + Environment.NewLine + "Press 'r' to restart!";
+            if (Input.GetKey("r"))
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else if (alive)
         {
             if (onGround == true)
             {
@@ -151,9 +180,10 @@ public class CharacterControl : MonoBehaviour
                 transform.Translate(straffe, 0, translation);                   //Kombination von beiden Berechnungen um Bewegunng zu erzeugen
                 speedchange = true;
             }
+            time = Time.fixedTime;
         }
 
-        
+
     }
 
     void MouseAiming()

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class CameraMoevement : MonoBehaviour
 {
+    Rigidbody rb;
     public GameObject player;
     void Start()
     {
-        
+        rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -21,8 +22,18 @@ public class CameraMoevement : MonoBehaviour
     void Update()
     {
         CharacterControl PlayerScript = player.GetComponent<CharacterControl>();
-        if (PlayerScript.playerHealth != 0)
-        MouseAiming();
+        if(!PlayerScript.alive)
+        {
+            rb.freezeRotation = true;
+        }
+        else if(!PlayerScript.gameEnd)
+        {
+            rb.freezeRotation = true;
+        }
+        else if (PlayerScript.alive && PlayerScript.gameEnd == false)
+        {
+            MouseAiming();
+        }
     }
 
     void MouseAiming()
