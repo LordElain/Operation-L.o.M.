@@ -6,10 +6,13 @@ public class Animations_Movement : MonoBehaviour
 {
     private Animator animatorComp = null;
     public GameObject Spieler;
+    AudioSource audioData;
+    public AudioClip Walk;
     // Start is called before the first frame update
     void Start()
     {
         animatorComp = GetComponent<Animator>();
+        audioData = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -20,6 +23,8 @@ public class Animations_Movement : MonoBehaviour
         {
             animatorComp.SetTrigger("Run");
             animatorComp.SetBool("Idle_Status", false);
+            audioData.PlayOneShot(Walk, 0.3f);
+
 
         }
         if (Input.GetKeyUp(KeyCode.W))

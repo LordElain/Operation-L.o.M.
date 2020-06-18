@@ -13,11 +13,14 @@ public class EnemyControl : MonoBehaviour
     public Transform target;
     NavMeshAgent agent;
     public bool attackStatus = false;
+    AudioSource audioData;
+    public AudioClip Attack;
     void Start()
     {
         enemyhealth = 2;
         agent = GetComponent<NavMeshAgent>();
         attackStatus = false;
+        audioData = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -60,6 +63,7 @@ public class EnemyControl : MonoBehaviour
             agent.speed = 0.0f;
             //Debug.Log(attackStatus);
             Debug.Log("Spieler hat " + PlayerScript.playerHealth + " HP");
+            audioData.PlayOneShot(Attack, 0.3f);
         }
     }
 }
