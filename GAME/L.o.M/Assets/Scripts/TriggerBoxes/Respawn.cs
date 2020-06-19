@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Respawn : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Respawn : MonoBehaviour
     public GameObject Regal;
     public GameObject Goal;
     public GameObject Player;
+    public GameObject ending;
+    public Text resapwned;
 
     bool entered = false;
     
@@ -20,6 +23,7 @@ public class Respawn : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Debug.Log(Vector3.Distance(Player.transform.position, this.transform.position));
         if (Vector3.Distance(Player.transform.position,this.transform.position) < 2)
         {
             if (!enemy1)                                                //Wenn es das gameobject nicht gibt wenn man durch den trigger läuft wird der neue auf active gesetzt
@@ -29,16 +33,24 @@ public class Respawn : MonoBehaviour
             if (!enemy3)
                 enemy3new.SetActive(true);
             entered = true;
+            resapwned.text = "Enemies have respawned, and they are STRONGER!";
         }
         if (entered)
         {
-            if (enemy1 && enemy2 && enemy3)
+            if (!enemy1 || !enemy2 || !enemy3)
             {
                 float step = speed * Time.deltaTime;
                 Regal.transform.position = Vector3.MoveTowards(Regal.transform.position, Goal.transform.position, step);            //Bewegt Regal von seiner Position zur Goal position
-                Debug.Log("Bewege Regal");
+                //Debug.Log("Bewege Regal");
             }
-            if(Regal.transform.position == Goal.transform.position)
+            if (Regal.transform.position == Goal.transform.position)
+            {
+                ending.SetActive(true);
+                resapwned.text = " ";
+                Destroy(this.gameObject);
+            }
+            ending.SetActive(true);
+            resapwned.text = " ";
             Destroy(this.gameObject);
         }
     }
