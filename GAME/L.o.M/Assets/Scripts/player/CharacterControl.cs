@@ -138,14 +138,12 @@ public class CharacterControl : MonoBehaviour
                     speedx *= 2.0f;
                     speedz *= 2.0f;
                     sprinting = true;
-                    audioData.PlayOneShot(Run, 0.5f);
                 }
                 else if (Input.GetButtonUp("Sprint"))                                   //Alle Geschwindigkeiten wieder normalisieren, sprinting für sliden ändern
                 {
                     speedx = speed;
                     speedz = speed;
                     sprinting = false;
-                    audioData.Stop();
                 }
             }
             else

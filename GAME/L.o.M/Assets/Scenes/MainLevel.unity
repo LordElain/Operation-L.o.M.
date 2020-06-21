@@ -51,7 +51,7 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 2.19
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
+    m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
@@ -199,7 +199,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0, g: 0.2805748, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 3.7370577
   m_SpotAngle: 55
   m_CookieSize: 10
@@ -17263,7 +17263,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0, g: 0.2805748, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 3.7370577
   m_SpotAngle: 55
   m_CookieSize: 10
@@ -21065,7 +21065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085946051}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -15.09, y: -4.337736, z: 35.774}
+  m_LocalPosition: {x: -13.646, y: -4.337736, z: 35.99}
   m_LocalScale: {x: 0.10671999, y: 0.13420458, z: 0.15326001}
   m_Children:
   - {fileID: 1968965801}
@@ -38578,7 +38578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968965800}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.31, y: 0, z: 7.19}
+  m_LocalPosition: {x: -1.35, y: 0, z: -2.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1085946052}
@@ -40536,12 +40536,12 @@ PrefabInstance:
     - target: {fileID: 8876518737685432877, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.09
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 8876518737685432877, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.344
       objectReference: {fileID: 0}
     - target: {fileID: 8876518737685432877, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
@@ -40942,7 +40942,7 @@ Light:
   serializedVersion: 8
   m_Type: 3
   m_Color: {r: 0, g: 0.2805748, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 3.7370577
   m_SpotAngle: 55
   m_CookieSize: 10
@@ -40963,7 +40963,7 @@ Light:
     m_Bits: 4294967295
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 4.055951, y: 39.289417}
+  m_AreaSize: {x: 4.055951, y: 44.660576}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
@@ -42088,12 +42088,12 @@ PrefabInstance:
     - target: {fileID: 8876518737685432877, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.09
+      value: 0.11999981
       objectReference: {fileID: 0}
     - target: {fileID: 8876518737685432877, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.344
       objectReference: {fileID: 0}
     - target: {fileID: 8876518737685432877, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}

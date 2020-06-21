@@ -31,6 +31,7 @@ public class Animations_Movement : MonoBehaviour
         {
             animatorComp.SetBool("Crouch_Status", false);
             animatorComp.SetBool("Idle_Status", true);
+            audioData.Stop();
         }
         //CROUCH
         if (Input.GetKeyDown(KeyCode.LeftControl))
