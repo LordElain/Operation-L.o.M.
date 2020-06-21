@@ -24,7 +24,7 @@ public class Respawn : MonoBehaviour
     private void FixedUpdate()
     {
         //Debug.Log(Vector3.Distance(Player.transform.position, this.transform.position));
-        if (Vector3.Distance(Player.transform.position,this.transform.position) < 2)
+        if (Vector3.Distance(Player.transform.position,this.transform.position) < 6)
         {
             if (!enemy1)                                                //Wenn es das gameobject nicht gibt wenn man durch den trigger läuft wird der neue auf active gesetzt
                 enemy1new.SetActive(true);

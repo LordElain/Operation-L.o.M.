@@ -15,8 +15,8 @@ public class CharacterControl : MonoBehaviour
 
     public bool moving = false;
     
-    private float speedx;
-    private float speedz;
+    public float speedx;
+    public float speedz;
     private float translation;
     private float straffe;
     
@@ -133,10 +133,15 @@ public class CharacterControl : MonoBehaviour
                 if (!wasinair)
                     speedx = speed;
                 wasinair = true;
-                if (Input.GetButtonDown("Sprint"))                                      //Sprinten verdoppelt Spielerspeed, sprinting auf true für crouchen
+                if (Input.GetButtonDown("Sprint") && speedx <= 8.0f)                                      //Sprinten verdoppelt Spielerspeed, sprinting auf true für crouchen
                 {
                     speedx *= 2.0f;
                     speedz *= 2.0f;
+                    if(speedx >= 8.0f)
+                    {
+                        speedx = 2 * speed;
+                        speedz = 2 * speed;
+                    }
                     sprinting = true;
                 }
                 else if (Input.GetButtonUp("Sprint"))                                   //Alle Geschwindigkeiten wieder normalisieren, sprinting für sliden ändern
@@ -210,7 +215,7 @@ public class CharacterControl : MonoBehaviour
 
     public void SlowDown()
     {
-        speed *= 0.8f;
+        speed *= 0.9f;
         speedx = speed; 
         speedz = speed;
     }
