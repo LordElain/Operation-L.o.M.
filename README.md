@@ -12,21 +12,24 @@ Es ist das Jahr 20XX und genau das hat er getan: Er hat all das Wasser geklaut u
 **CREDITS**
 An dem Spiel haben Nynomastro und Elain gearbeitet, jedoch sich bei einigen Fremd Ressourcen bedient.
 
-  Sprecher
+  **Sprecher**
+  
     - Lasse Schilling im Intro https://twitter.com/LasseSchilling
-    
     - Elain im Walkie Talkie https://twitter.com/Lord_Elain
 
   
-  Intro
-   Texturen
+  **Intro**
+  
+   **Texturen**
+   
       - Pergament by ChrisFiedler: https://pixabay.com/de/photos/papier-alt-textur-pergament-1074131/
-      
       - Schreibtisch by djedj: https://pixabay.com/de/photos/muster-holz-retro-oberfläche-tisch-3371709/
-   Musik
+  **Musik**
+   
       - Hotline Miami 2: Wrong Number Soundtrack - Around by Modulogeek: https://www.youtube.com/watch?v=oZjTGFeBXAY 
       
-  Game
+  **Game**
+  
     Font
       - Impact: https://www.wfonts.com/font/impact
       
