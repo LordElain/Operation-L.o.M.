@@ -49,23 +49,24 @@ An dem Spiel haben Nynomastro und Elain gearbeitet, jedoch sich bei einigen Frem
       Regal
         - Grimy PBR Metal: https://freepbr.com/materials/grimy-metal/
         
-       Boxen
+      Boxen
         - Hardwood Brown Planks: https://freepbr.com/materials/hardwood-brown-planks-pbr-material/
         
-       Stuhl
+      Stuhl
         - Old Soiled Cloth: https://freepbr.com/materials/old-soiled-cloth-1-pbr-material/
         
-       Gegner
+      Gegner
         - Brushed Metal: https://freepbr.com/materials/brushed-metal1/ 
         
-       Walkie Talkie
+      Walkie Talkie
         - Textured Rubber: https://freepbr.com/materials/textured-rubber-pbr-material/
         
-    Sounds
+     Sounds
         - Sword Slash: https://www.youtube.com/watch?v=Oa1mfoOInbA
         - Jump on big rusty plate construction site: https://freesound.org/people/jorickhoofd/sounds/176670/
         - Footsteps On Metal Warehouse Floor Moderate Speed Sound: https://www.fesliyanstudios.com/play-mp3/2414
         - Super Smash Bros Ultimate Critical Hit Sound Effect: https://www.youtube.com/watch?v=zA4Ga1wx-AI
+        
     Music
         - Spacewalk by Dance with the Dead: https://www.youtube.com/watch?v=noDJeHeL6_Y
        
