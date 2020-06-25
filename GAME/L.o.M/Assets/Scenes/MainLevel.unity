@@ -1340,7 +1340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62925555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.78, y: 0.029, z: 0.048}
+  m_LocalPosition: {x: -5.78, y: -0.079, z: 0.048}
   m_LocalScale: {x: 12.6362, y: 1.6592274, z: 0.57782567}
   m_Children: []
   m_Father: {fileID: 2071546001}
@@ -5147,6 +5147,7 @@ GameObject:
   - component: {fileID: 246204548}
   - component: {fileID: 246204547}
   - component: {fileID: 246204549}
+  - component: {fileID: 246204550}
   m_Layer: 0
   m_Name: Wasser Bottle (1)
   m_TagString: Untagged
@@ -5162,8 +5163,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246204543}
   m_LocalRotation: {x: -0.70856065, y: 0.030465012, z: -0.020486291, w: 0.7046943}
-  m_LocalPosition: {x: -2.059, y: -4.747, z: 39.564}
-  m_LocalScale: {x: 0.062973365, y: 0.06297332, z: 0.06297332}
+  m_LocalPosition: {x: -2.059, y: -4.667, z: 39.564}
+  m_LocalScale: {x: 0.069894135, y: 0.06297332, z: 0.08054009}
   m_Children: []
   m_Father: {fileID: 391779814}
   m_RootOrder: 1
@@ -5256,6 +5257,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1531854907}
   m_rotationspeed: 10
+--- !u!220 &246204550
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246204543}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+  m_Dering: 0
 --- !u!1 &255751824
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,6 +5457,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969faeee56baf43479f7979fe910cc28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &281590423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281590424}
+  - component: {fileID: 281590425}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &281590424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281590423}
+  m_LocalRotation: {x: 0.031786103, y: 0.6845605, z: 0.72639775, w: -0.052085996}
+  m_LocalPosition: {x: -2.222, y: -4.928, z: 39.378}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 391779814}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 266.23102, y: -202.481, z: 29.284988}
+--- !u!108 &281590425
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281590423}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 3
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2
+  m_Range: 2.7194185
+  m_SpotAngle: 32.8
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1.2583375, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &290076551
 GameObject:
   m_ObjectHideFlags: 0
@@ -7563,6 +7651,7 @@ Transform:
   - {fileID: 246204544}
   - {fileID: 1094963004}
   - {fileID: 881144185}
+  - {fileID: 281590424}
   m_Father: {fileID: 521934467}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17050,6 +17139,7 @@ GameObject:
   - component: {fileID: 881144189}
   - component: {fileID: 881144188}
   - component: {fileID: 881144190}
+  - component: {fileID: 881144191}
   m_Layer: 0
   m_Name: Wasser Bottle (3)
   m_TagString: Untagged
@@ -17065,8 +17155,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881144184}
   m_LocalRotation: {x: -0.70856065, y: 0.030465012, z: -0.020486291, w: 0.7046943}
-  m_LocalPosition: {x: -2.531, y: -4.747, z: 39.564}
-  m_LocalScale: {x: 0.062973365, y: 0.06297332, z: 0.06297332}
+  m_LocalPosition: {x: -2.531, y: -4.667, z: 39.564}
+  m_LocalScale: {x: 0.069894135, y: 0.06297332, z: 0.08054009}
   m_Children: []
   m_Father: {fileID: 391779814}
   m_RootOrder: 3
@@ -17159,6 +17249,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1531854907}
   m_rotationspeed: 10
+--- !u!220 &881144191
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881144184}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+  m_Dering: 0
 --- !u!1 &883142365
 GameObject:
   m_ObjectHideFlags: 0
@@ -21380,6 +21488,7 @@ GameObject:
   - component: {fileID: 1094963008}
   - component: {fileID: 1094963007}
   - component: {fileID: 1094963009}
+  - component: {fileID: 1094963010}
   m_Layer: 0
   m_Name: Wasser Bottle (2)
   m_TagString: Untagged
@@ -21395,8 +21504,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094963003}
   m_LocalRotation: {x: -0.70856065, y: 0.030465012, z: -0.020486291, w: 0.7046943}
-  m_LocalPosition: {x: -2.295, y: -4.747, z: 39.564}
-  m_LocalScale: {x: 0.062973365, y: 0.06297332, z: 0.06297332}
+  m_LocalPosition: {x: -2.295, y: -4.667, z: 39.564}
+  m_LocalScale: {x: 0.069894135, y: 0.06297332, z: 0.08054009}
   m_Children: []
   m_Father: {fileID: 391779814}
   m_RootOrder: 2
@@ -21489,6 +21598,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1531854907}
   m_rotationspeed: 10
+--- !u!220 &1094963010
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094963003}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+  m_Dering: 0
 --- !u!1 &1100570281
 GameObject:
   m_ObjectHideFlags: 0
@@ -36571,7 +36698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7f663139e40cb0f438b88c60d5f2cf88, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.701
+      value: 45.626
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 7f663139e40cb0f438b88c60d5f2cf88, type: 3}
       propertyPath: m_LocalRotation.x
@@ -41941,6 +42068,7 @@ GameObject:
   - component: {fileID: 4796886526278671134}
   - component: {fileID: 4796886526278671133}
   - component: {fileID: 4796886526278671135}
+  - component: {fileID: 4796886526278671136}
   m_Layer: 0
   m_Name: Wasser Bottle
   m_TagString: Untagged
@@ -41991,6 +42119,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1531854907}
   m_rotationspeed: 10
+--- !u!220 &4796886526278671136
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796886526278671132}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1, y: 1, z: 1}
+  - {x: 1, y: 1, z: -1}
+  - {x: 1, y: -1, z: 1}
+  - {x: 1, y: -1, z: -1}
+  - {x: -1, y: 1, z: 1}
+  - {x: -1, y: 1, z: -1}
+  - {x: -1, y: -1, z: 1}
+  - {x: -1, y: -1, z: -1}
+  m_Dering: 0
 --- !u!4 &4796886526278829884
 Transform:
   m_ObjectHideFlags: 0
@@ -41999,8 +42145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4796886526278671132}
   m_LocalRotation: {x: -0.70856065, y: 0.030465012, z: -0.020486291, w: 0.7046943}
-  m_LocalPosition: {x: -1.836, y: -4.747, z: 39.564}
-  m_LocalScale: {x: 0.062973365, y: 0.06297332, z: 0.06297332}
+  m_LocalPosition: {x: -1.836, y: -4.667, z: 39.564}
+  m_LocalScale: {x: 0.069894135, y: 0.06297332, z: 0.08054009}
   m_Children: []
   m_Father: {fileID: 391779814}
   m_RootOrder: 0
