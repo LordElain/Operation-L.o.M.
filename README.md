@@ -72,8 +72,8 @@ An dem Spiel haben Nynomastro und Elain gearbeitet, jedoch sich bei einigen Frem
    - Spacewalk by Dance with the Dead: https://www.youtube.com/watch?v=noDJeHeL6_Y
        
    ### Unity Addons
-   - Umotion Pro - https://assetstore.unity.com/packages/tools/animation/umotion-pro-animation-editor-95991
-   - Space Robot Kyle - https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696
-   - Procedural fire - https://assetstore.unity.com/packages/vfx/particles/fire-explosions/procedural-fire-141496
+   - Umotion Pro: https://assetstore.unity.com/packages/tools/animation/umotion-pro-animation-editor-95991
+   - Space Robot Kyle: https://assetstore.unity.com/packages/3d/characters/robots/space-robot-kyle-4696
+   - Procedural fire: https://assetstore.unity.com/packages/vfx/particles/fire-explosions/procedural-fire-141496
       
      
