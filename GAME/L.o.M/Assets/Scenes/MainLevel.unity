@@ -14264,6 +14264,7 @@ MonoBehaviour:
   turnSpeed: 4
   minTurnAngle: -90
   maxTurnAngle: 90
+  sprintMultiplier: 1.5
   playerMaxHealth: 5
   playerHealth: 5
   score: 0
@@ -41689,6 +41690,11 @@ PrefabInstance:
       propertyPath: GameOver
       value: 
       objectReference: {fileID: 263472215}
+    - target: {fileID: 90837225220986240, guid: 2ccd18ebcd3f3c3498589f68526c5fc9,
+        type: 3}
+      propertyPath: sprintMultiplier
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 90837225227509901, guid: 2ccd18ebcd3f3c3498589f68526c5fc9,
         type: 3}
       propertyPath: m_LocalPosition.x

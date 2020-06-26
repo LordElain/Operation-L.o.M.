@@ -37,6 +37,7 @@ public class CharacterControl : MonoBehaviour
     public float turnSpeed = 4.0f;
     public float minTurnAngle = -90.0f;
     public float maxTurnAngle = 90.0f;
+    public float sprintMultiplier = 1.5f;
     private float time;
     
     public int playerMaxHealth = 5;
@@ -135,12 +136,12 @@ public class CharacterControl : MonoBehaviour
                 wasinair = true;
                 if (Input.GetButtonDown("Sprint") && speedx <= 8.0f)                                      //Sprinten verdoppelt Spielerspeed, sprinting auf true für crouchen
                 {
-                    speedx *= 2.0f;
-                    speedz *= 2.0f;
-                    if(speedx >= 8.0f)
+                    speedx *= sprintMultiplier;
+                    speedz *= sprintMultiplier;
+                    if(speedx >= (4 * sprintMultiplier))
                     {
-                        speedx = 2 * speed;
-                        speedz = 2 * speed;
+                        speedx = sprintMultiplier * speed;
+                        speedz = sprintMultiplier * speed;
                     }
                     sprinting = true;
                 }

@@ -35,7 +35,7 @@ public class FieldOfView : MonoBehaviour
             Transform target = targetsInViewRadius[i].transform;
             Vector3 dirToTarget = (target.position - transform.position).normalized;                    //Richtung zum Ziel berechnen
             float dstToTarget = Vector3.Distance(transform.position, target.position);                  //Entfernung zum Ziel berechnen
-            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2 && dstToTarget < 3)     //Wenn im Sichtradius und Entfernung kleiner 3
+            if (Vector3.Angle(transform.forward, dirToTarget) < viewAngle / 2 && dstToTarget < 4)     //Wenn im Sichtradius und Entfernung kleiner 3
             {
                 if (!Physics.Raycast(transform.position, dirToTarget, dstToTarget, obstacleMask))       //Raycast gibt true wenn kein Obstacle im sichtfeld ist (Raycast von mom. Pos in Richtung und Distanz des Ziels checkt nach ObstacleMask)
                 {
