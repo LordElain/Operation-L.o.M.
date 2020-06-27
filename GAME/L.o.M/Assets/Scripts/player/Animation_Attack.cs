@@ -25,6 +25,7 @@ public class Animation_Attack : MonoBehaviour
             hashit = true;
             animatorComp.SetTrigger("Hit");
             audioData.PlayOneShot(Attack,0.3f);
+            Cursor.visible = false;
         }
     }
 }

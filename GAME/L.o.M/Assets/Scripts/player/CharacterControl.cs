@@ -60,6 +60,7 @@ public class CharacterControl : MonoBehaviour
     {      
          // turn off the cursor
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         //grabs the Rigidbody from the player
         player = GetComponent<Rigidbody>();
         //says that the player is on the ground at runtime
@@ -79,6 +80,7 @@ public class CharacterControl : MonoBehaviour
             {
                 // turn on the cursor
                 Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
 
             //checks if the player is on the ground when the "Jump" button is pressed

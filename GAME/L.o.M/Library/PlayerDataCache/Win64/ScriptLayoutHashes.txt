@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-F:/IT/Progs/Operation-L.o.M/BUILD/L.o.M.exe
+C:/Users/sttidenn/Documents/Documents/Studium/Semester4/GE/Projekt L.o.M/L.o.M.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/MainLevel.unity
