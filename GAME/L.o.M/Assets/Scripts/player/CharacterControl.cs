@@ -120,6 +120,8 @@ public class CharacterControl : MonoBehaviour
         if (gameEnd)
         {
             GameOver.text = "You Won! Your Score was: " + score + Environment.NewLine + "Your time was " + time;
+            if (Input.GetKey("r"))
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else if (!alive)
         {

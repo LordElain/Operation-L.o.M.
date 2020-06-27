@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/sttidenn/Documents/Documents/Studium/Semester4/GE/Projekt L.o.M/L.o.M.exe
+F:/IT/Progs/Operation-L.o.M/BUILD/L.o.M.exe
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/MainLevel.unity
@@ -121,7 +121,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 324349b9eebc7dc140f6219f4e8631b9 Assembly-CSharp.dll:.Animation_Attack
-bca31e88149dfc565acbc7ed8d01edc2 Assembly-CSharp.dll:.EnemyControl
+97b2c155b5487d38e7c91da53defedf2 Assembly-CSharp.dll:.EnemyControl
 b8a5e8091ab0b8861d2add371082c5e0 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 ea0d887b23345d4c5f8102f04eaa7b17 Assembly-CSharp.dll:.FieldOfView
 26fe8d64d18a6adb64611d959c11fe05 Assembly-CSharp.dll:.EndGameTrigger

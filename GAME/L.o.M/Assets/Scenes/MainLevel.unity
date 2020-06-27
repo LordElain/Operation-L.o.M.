@@ -56,8 +56,8 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 2
-    m_BakeResolution: 65
-    m_AtlasSize: 512
+    m_BakeResolution: 4
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -16887,6 +16887,11 @@ PrefabInstance:
       propertyPath: enemyhealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8876518737685432879, guid: ccd066caeee0bcf40aadea4587f7dfbd,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1662966230}
     - target: {fileID: 8876518737941637246, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25240,7 +25245,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 534669904}
   m_PlaneDistance: 2
-  m_PixelPerfect: 1
+  m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -28178,7 +28183,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423263422}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
@@ -30985,6 +30990,11 @@ PrefabInstance:
       propertyPath: enemyhealth
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8876518737685432879, guid: ccd066caeee0bcf40aadea4587f7dfbd,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 599583645}
     - target: {fileID: 8876518737941637246, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -38639,6 +38649,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1531567579}
+    - target: {fileID: 8876518737685432879, guid: ccd066caeee0bcf40aadea4587f7dfbd,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1907440792}
     - target: {fileID: 8876518737941637246, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -40369,6 +40384,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1531567579}
+    - target: {fileID: 8876518737685432879, guid: ccd066caeee0bcf40aadea4587f7dfbd,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1701570747}
     - target: {fileID: 8876518737941637246, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -41760,6 +41780,11 @@ PrefabInstance:
       propertyPath: enemyhealth
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8876518737685432879, guid: ccd066caeee0bcf40aadea4587f7dfbd,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1560624643}
     - target: {fileID: 8876518737941637246, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -43347,6 +43372,11 @@ PrefabInstance:
       propertyPath: enemyhealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8876518737685432879, guid: ccd066caeee0bcf40aadea4587f7dfbd,
+        type: 3}
+      propertyPath: Enemy
+      value: 
+      objectReference: {fileID: 1428424667}
     - target: {fileID: 8876518737941637246, guid: ccd066caeee0bcf40aadea4587f7dfbd,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

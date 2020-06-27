@@ -9,6 +9,7 @@ public class EnemyControl : MonoBehaviour
     public int enemyhealth;
     public GameObject Weapon;
     public GameObject player;
+    public GameObject Enemy;
 
     public Transform target;
     NavMeshAgent agent;
@@ -50,7 +51,7 @@ public class EnemyControl : MonoBehaviour
                 }
                 else 
                 {
-                    Destroy(this.gameObject);
+                    Enemy.SetActive(false);
                     WeaponScript.hashit = false;
                 }
             }
@@ -64,7 +65,7 @@ public class EnemyControl : MonoBehaviour
             //Debug.Log(attackStatus);
             Debug.Log("Spieler hat " + PlayerScript.playerHealth + " HP");
             audioData.PlayOneShot(Attack, 0.3f);
-            attackStatus = false;
+            
 
         }
         else

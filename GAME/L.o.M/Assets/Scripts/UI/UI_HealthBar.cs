@@ -68,7 +68,7 @@ public class UI_HealthBar : MonoBehaviour
         Canvas Verloren4Script = Verloren4.GetComponent<Canvas>();
 
         // ENEMY
-        Follow FollowScript = Following.GetComponent<Follow>();
+        Follow FollowScript =  Following.GetComponent<Follow>();
         Follow FollowScript2 = Following2.GetComponent<Follow>();
         Follow FollowScript3 = Following3.GetComponent<Follow>();
         Follow FollowScript4 = Following4.GetComponent<Follow>();
@@ -85,24 +85,45 @@ public class UI_HealthBar : MonoBehaviour
                 Verloren0Script.enabled = true;
                 break;
             case 3:
+                Leben0Script.enabled = false;
+                Verloren0Script.enabled = true;
                 Leben1Script.enabled = false;
                 Verloren1Script.enabled = true;
                 break;
             case 2:
+                Leben0Script.enabled = false;
+                Verloren0Script.enabled = true;
+                Leben1Script.enabled = false;
+                Verloren1Script.enabled = true;
                 Leben2Script.enabled = false;
                 Verloren2Script.enabled = true;
                 break;
             case 1:
+                Leben0Script.enabled = false;
+                Verloren0Script.enabled = true;
+                Leben1Script.enabled = false;
+                Verloren1Script.enabled = true;
+                Leben2Script.enabled = false;
+                Verloren2Script.enabled = true;
                 Leben3Script.enabled = false;
                 Verloren3Script.enabled = true;
                 break;
             case 0:
+                Leben0Script.enabled = false;
+                Verloren0Script.enabled = true;
+                Leben1Script.enabled = false;
+                Verloren1Script.enabled = true;
+                Leben2Script.enabled = false;
+                Verloren2Script.enabled = true;
+                Leben3Script.enabled = false;
+                Verloren3Script.enabled = true;
                 Leben4Script.enabled = false;
                 Verloren4Script.enabled = true;
                 break;
             default:
                 break;
         }
+        
  
                 
 

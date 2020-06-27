@@ -37,7 +37,7 @@ public class Respawn : MonoBehaviour
         }
         if (entered)
         {
-            if (!enemy1 || !enemy2 || !enemy3)
+            if (enemy1.activeSelf == false || enemy2.activeSelf == false || enemy3.activeSelf == false)
             {
                 float step = speed * Time.deltaTime;
                 Regal.transform.position = Vector3.MoveTowards(Regal.transform.position, Goal.transform.position, step);            //Bewegt Regal von seiner Position zur Goal position

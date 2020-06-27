@@ -17,36 +17,7 @@ public class Enemy_Animation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Follow FollowScript = Following.GetComponent<Follow>();
         EnemyControl AttackScript = Attacking.GetComponent<EnemyControl>();
-
-        //Debug.Log(FollowScript.detectPlayer);
-        if (FollowScript.detectPlayer == true)
-        {
-            animatorComp.SetTrigger("Run");
-            animatorComp.SetBool("IdleStatus", false);
-            animatorComp.SetBool("RunStatus", true);
-        }
-       else
-        {
-            animatorComp.SetBool("RunStatus", false);
-        }
-
-        if (FollowScript.EnemyIdle == true)
-        {
-            animatorComp.SetBool("IdleStatus", true);
-            //Debug.Log("Animation Idle True" + FollowScript.EnemyIdle);
-            animatorComp.SetBool("RunStatus", false);
-            
-        }
-        else
-        {
-            //Debug.Log("Animation Idle False" + FollowScript.EnemyIdle);
-            animatorComp.SetTrigger("Run");
-            animatorComp.SetBool("IdleStatus", false);
-            animatorComp.SetBool("RunStatus", true);
-        }
-
         if (AttackScript.attackStatus == true)
         {
             animatorComp.SetTrigger("Attack");
