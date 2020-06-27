@@ -48,7 +48,7 @@ public class EnemyControl : MonoBehaviour
                     Debug.Log("Enemy Health" + enemyhealth);
                     WeaponScript.hashit = false;
                 }
-                else if (enemyhealth == 0)
+                else 
                 {
                     Destroy(this.gameObject);
                     WeaponScript.hashit = false;
@@ -57,13 +57,20 @@ public class EnemyControl : MonoBehaviour
         }
         if (other.gameObject.CompareTag("player"))
         {
+            Debug.Log("Attack Status: " + attackStatus);
             attackStatus = true;
-
             PlayerScript.playerHealth--;                                              //Ziehe bei Kontakt spieler ein HP ab und setze speed auf 0
             agent.speed = 0.0f;
             //Debug.Log(attackStatus);
             Debug.Log("Spieler hat " + PlayerScript.playerHealth + " HP");
             audioData.PlayOneShot(Attack, 0.3f);
+            attackStatus = false;
+
+        }
+        else
+        {
+            attackStatus = false;
+            Debug.Log("Attack Status: " + attackStatus);
         }
     }
 }

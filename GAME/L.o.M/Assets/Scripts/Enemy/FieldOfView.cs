@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UMotionEditor;
 using UnityEngine;
 
 public class FieldOfView : MonoBehaviour

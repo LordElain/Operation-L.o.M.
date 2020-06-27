@@ -51,7 +51,6 @@ public class Respawn : MonoBehaviour
             }
             ending.SetActive(true);
             resapwned.text = " ";
-            Destroy(this.gameObject);
         }
     }
 }

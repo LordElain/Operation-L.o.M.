@@ -7,6 +7,11 @@ public class UI_HealthBar : MonoBehaviour
 {
     public GameObject HUD;
     public GameObject Following;
+    public GameObject Following2;
+    public GameObject Following3;
+    public GameObject Following4;
+    public GameObject Following5;
+    public GameObject Following6;
     public GameObject Player;
 
     //LEBENSBALKEN
@@ -41,7 +46,7 @@ public class UI_HealthBar : MonoBehaviour
     void Update()
     {
         Canvas HUDScript = HUD.GetComponent<Canvas>();
-        Follow FollowScript = Following.GetComponent<Follow>();
+        
         CharacterControl PlayerScript = Player.GetComponent<CharacterControl>();
         Canvas AlertScript = Alert.GetComponent<Canvas>();
 
@@ -61,6 +66,14 @@ public class UI_HealthBar : MonoBehaviour
 
         Canvas Leben4Script = Leben4.GetComponent<Canvas>();
         Canvas Verloren4Script = Verloren4.GetComponent<Canvas>();
+
+        // ENEMY
+        Follow FollowScript = Following.GetComponent<Follow>();
+        Follow FollowScript2 = Following2.GetComponent<Follow>();
+        Follow FollowScript3 = Following3.GetComponent<Follow>();
+        Follow FollowScript4 = Following4.GetComponent<Follow>();
+        Follow FollowScript5 = Following5.GetComponent<Follow>();
+        Follow FollowScript6 = Following6.GetComponent<Follow>();
 
         switch (PlayerScript.playerHealth)
         {
@@ -94,7 +107,7 @@ public class UI_HealthBar : MonoBehaviour
                 
 
         // ALERTA ALERTA
-        if (FollowScript.detectPlayer == true)
+        if (FollowScript.detectPlayer == true || FollowScript2.detectPlayer == true || FollowScript3.detectPlayer == true || FollowScript4.detectPlayer == true || FollowScript5.detectPlayer == true || FollowScript6.detectPlayer == true)
         {
             AlertScript.enabled = true;
         }
